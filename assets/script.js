@@ -73,6 +73,7 @@ function changeBanner(direction, index) {
 	}
 	changePicture(index)
 	changeDot(index)
+	changeText(index)
 	return index
 }
 
@@ -90,6 +91,11 @@ function changeDot(index) {
 			dots[i].classList.remove("dot_selected")
 		}
 	}
+}
+
+function changeText(index) {
+	let bannerText = document.querySelector("#banner p")
+	bannerText.innerHTML = slides[index - 1].tagLine
 }
 
 carousel()
